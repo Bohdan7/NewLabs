@@ -15,11 +15,14 @@ public class MyLinkedSet implements Set<Device> {
     public MyLinkedSet() {
     }
 
-    public MyLinkedSet(Device    student) {
+    public MyLinkedSet(Device device) {
+        add(device);
     }
 
-    public MyLinkedSet(Collection<Device> students) {
-
+    public MyLinkedSet(Collection<Device> devices) {
+        for (Device device : devices) {
+            add(device);
+        }
     }
 
     /**
@@ -67,6 +70,7 @@ public class MyLinkedSet implements Set<Device> {
             head = tail = newNode;
         } else {
             tail.setNext(newNode);
+            newNode.setPrevious(tail);
             tail = newNode;
         }
         size++;
