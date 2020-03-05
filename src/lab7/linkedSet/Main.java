@@ -16,5 +16,4 @@ public class Main {
         System.out.println(myLinkedSet.isEmpty());
         System.out.println("contains = " + myLinkedSet.contains(new Device("SuperDevice!2")));
     }
-    hellp me pls
 }
